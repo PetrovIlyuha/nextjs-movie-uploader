@@ -19,7 +19,7 @@ export const MOVIE_DATA = [
     rating: 4.7,
     genre: "action, crime, drama",
     image:
-      "https://img.cinemablend.com/filter:scale/quill/c/3/8/0/f/4/c380f4f12cfeec19f0c40c6f57db188f2f98cca8.jpg?mw=600"
+      "https://cdn3.movieweb.com/i/article/MDBokXUxOlvIIVBrPF2PenwAFlajFG/798:50/Dark-Knight-Movie-10th-Anniversary-Theatrical-Rerelease.jpg"
   },
   {
     id: "3",
@@ -31,5 +31,27 @@ export const MOVIE_DATA = [
     genre: "adventure, drama, fantasy",
     image:
       "https://img.cinemablend.com/filter:scale/quill/0/f/5/2/a/6/0f52a6843a25c1a5c1f9a0c00548cad9e1d912e2.jpg?mw=600"
+  },
+  {
+    id: "4",
+    name: "Breaking Bad",
+    releaseYear: 2009,
+    description:
+      "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.",
+    rating: 4.9,
+    genre: "adventure, criminal, drama",
+    image:
+      "https://static0.srcdn.com/wordpress/wp-content/uploads/2019/01/Breaking-Bad-Movie-Characters.jpg"
+  },
+  {
+    id: "5",
+    name: "True Detective",
+    releaseYear: 2014,
+    description:
+      'Looking for something to watch? Check out "True Detective." Season 3 is betting on an Oscar winner and a disturbing mystery to recapture the success of its first installment.',
+    rating: 4.7,
+    genre: "detective, criminal, drama",
+    image:
+      "https://www.hbo.com/content/dam/hbodata/series/true-detective/key_art/true-detective-s3-ka-1920.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg"
   }
 ];
