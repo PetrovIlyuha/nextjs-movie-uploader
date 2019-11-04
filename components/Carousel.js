@@ -20,21 +20,21 @@ const Carousel = props => {
         <div className="carousel-item active">
           <img
             className="d-block img-fluid"
-            src="http://placehold.it/900x350"
+            src="https://cdn3.movieweb.com/i/article/byipgN4A5ioXULCE54aj65Zy7JTfzw/798:50/Shawshank-Redemption-Movie-Facts-Trivia.jpg"
             alt="First slide"
           />
         </div>
         <div className="carousel-item">
           <img
             className="d-block img-fluid"
-            src="http://placehold.it/900x350"
+            src="https://cdn3.movieweb.com/i/article/MDBokXUxOlvIIVBrPF2PenwAFlajFG/798:50/Dark-Knight-Movie-10th-Anniversary-Theatrical-Rerelease.jpg"
             alt="Second slide"
           />
         </div>
         <div className="carousel-item">
           <img
             className="d-block img-fluid"
-            src="http://placehold.it/900x350"
+            src="https://static0.srcdn.com/wordpress/wp-content/uploads/2019/01/Breaking-Bad-Movie-Characters.jpg"
             alt="Third slide"
           />
         </div>

@@ -6,8 +6,12 @@ import Carousel from "../components/Carousel";
 import MovieList from "../components/MovieList";
 import Footer from "../components/Footer";
 
-import { MOVIE_DATA } from "../resources/1_data";
+import { getMovies } from "../actions/index";
 const Home = () => {
+  const [movies, setMovies] = useState([]);
+  getMovies().then(movies => {
+    setMovies(movies);
+  });
   return (
     <div>
       <Head>
@@ -38,15 +42,14 @@ const Home = () => {
       <Navbar />
       <div className="home-page">
         <div className="container">
-          console.log(MOVIE_DATA);
           <div className="row">
             <div className="col-lg-3">
               <Sidemenu />
             </div>
             <div className="col-lg-9">
-              <Carousel movies={MOVIE_DATA} />
+              <Carousel movies={movies} />
               <div className="row">
-                <MovieList movies={MOVIE_DATA} />
+                <MovieList movies={movies} />
               </div>
             </div>
           </div>
