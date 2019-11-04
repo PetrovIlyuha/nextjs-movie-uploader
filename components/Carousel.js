@@ -34,7 +34,7 @@ const Carousel = props => {
         <div className="carousel-item">
           <img
             className="d-block img-fluid"
-            src="https://static0.srcdn.com/wordpress/wp-content/uploads/2019/01/Breaking-Bad-Movie-Characters.jpg"
+            src="https://revengeofthefans.com/wp-content/uploads/2019/01/Breaking-Bad-RTF-e1548338096892.jpg"
             alt="Third slide"
           />
         </div>

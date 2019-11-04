@@ -40,8 +40,7 @@ export const MOVIE_DATA = [
       "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.",
     rating: 4.9,
     genre: "adventure, criminal, drama",
-    image:
-      "https://static0.srcdn.com/wordpress/wp-content/uploads/2019/01/Breaking-Bad-Movie-Characters.jpg"
+    image: "https://miro.medium.com/max/3840/1*Jh772SA8erMpe64mmQrE5Q.jpeg"
   },
   {
     id: "5",
