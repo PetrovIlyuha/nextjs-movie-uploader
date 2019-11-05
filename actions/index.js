@@ -46,7 +46,7 @@ export const MOVIE_DATA = [
     longDescription:
       'Breaking Bad is an American neo-Western crime drama television series created and produced by Vince Gilligan. The show originally aired on AMC for five seasons, from January 20, 2008, to September 29, 2013. Set and filmed in Albuquerque, New Mexico, the series tells the story of Walter White (Bryan Cranston), a struggling and depressed high school chemistry teacher who is diagnosed with stage-3 lung cancer. Together with his former student Jesse Pinkman (Aaron Paul), White turns to a life of crime by producing and selling crystallized methamphetamine to secure his family\'s financial future before he dies, while navigating the dangers of the criminal underworld. The title comes from the Southern colloquialism "breaking bad" which means to "raise hell" or turn to a life of crime. Gilligan characterized the series as showing Walter\'s transformation from a soft-spoken Mr. Chips into Scarface.',
     rating: 4.9,
-    genre: "adventure, criminal, drama",
+    genre: "crime, drama",
     image: "https://miro.medium.com/max/3840/1*Jh772SA8erMpe64mmQrE5Q.jpeg"
   },
   {
@@ -58,12 +58,32 @@ export const MOVIE_DATA = [
     longDescription:
       "True Detective is an American anthology crime drama television series created and written by Nic Pizzolatto. The series, broadcast by the premium cable network HBO in the United States, premiered on January 12, 2014. Each season of the series is structured as a self-contained narrative, employing new cast ensembles, and following various sets of characters and settings.The first season, starring Matthew McConaughey, Woody Harrelson, Michelle Monaghan, Michael Potts, and Tory Kittles, takes place in Louisiana and follows a pair of Louisiana State Police homicide detectives, and their pursuit of a serial killer over a 17-year period.",
     rating: 4.2,
-    genre: "detective, criminal, drama",
+    genre: "crime, drama",
     image:
       "https://www.hbo.com/content/dam/hbodata/series/true-detective/key_art/true-detective-s3-ka-1920.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg"
   }
 ];
 
+const CATEGORY_DATA = [
+  { id: "c-1", name: "drama" },
+  { id: "c-2", name: "action" },
+  { id: "c-3", name: "adventure" },
+  { id: "c-4", name: "crime" },
+  { id: "c-5", name: "fantasy" }
+];
+// TODO: getCategories function
+// TODO: get categories in index page
+// TODO: provide categories to sidemenu
+// TODO: in sidemenu iterate categories and display menu
+
+export const getCategories = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(CATEGORY_DATA);
+      reject("Something went Wrong...we are working on it...");
+    }, 200);
+  });
+};
 export const getMovies = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {

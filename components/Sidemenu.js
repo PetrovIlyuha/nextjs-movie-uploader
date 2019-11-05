@@ -1,19 +1,23 @@
 import React, { useState } from "react";
+import Modal from "./Modal";
+import MovieCreateForm from "./movieCreateForm";
 
 const Sidemenu = props => {
+  const { categories } = props;
   return (
     <div>
+      <Modal>
+        <MovieCreateForm />
+      </Modal>
       <h1 className="my-4">Ripe Bananas</h1>
       <div className="list-group">
-        <a href="#" className="list-group-item">
-          Category 1
-        </a>
-        <a href="#" className="list-group-item">
-          Category 2
-        </a>
-        <a href="#" className="list-group-item">
-          Category 3
-        </a>
+        {categories.map(category => {
+          return (
+            <a key={category.id} href="#" className="list-group-item bg-dark">
+              {category.name}
+            </a>
+          );
+        })}
       </div>
     </div>
   );

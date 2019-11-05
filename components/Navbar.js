@@ -3,7 +3,10 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav
+      className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+      style={{ backgroundColor: "red" }}
+    >
       <div className="container">
         <Link href={`/`}>
           <a className="navbar-brand">
