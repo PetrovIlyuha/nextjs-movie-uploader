@@ -1,6 +1,7 @@
 import React from "react";
 
 const Carousel = props => {
+  const { images } = props;
   return (
     <div
       id="carouselExampleIndicators"
@@ -8,36 +9,32 @@ const Carousel = props => {
       data-ride="carousel"
     >
       <ol className="carousel-indicators">
-        <li
-          data-target="#carouselExampleIndicators"
-          data-slide-to="0"
-          className="active"
-        ></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        {images.map((image, index) => (
+          <li
+            key={index}
+            data-target="#carouselExampleIndicators"
+            data-slide-to={index}
+            className={index === 0 ? "active" : ""}
+          ></li>
+        ))}
       </ol>
-      <div className="carousel-inner" role="listbox">
-        <div className="carousel-item active">
-          <img
-            className="d-block img-fluid"
-            src="https://cdn3.movieweb.com/i/article/byipgN4A5ioXULCE54aj65Zy7JTfzw/798:50/Shawshank-Redemption-Movie-Facts-Trivia.jpg"
-            alt="First slide"
-          />
-        </div>
-        <div className="carousel-item">
-          <img
-            className="d-block img-fluid"
-            src="https://cdn3.movieweb.com/i/article/MDBokXUxOlvIIVBrPF2PenwAFlajFG/798:50/Dark-Knight-Movie-10th-Anniversary-Theatrical-Rerelease.jpg"
-            alt="Second slide"
-          />
-        </div>
-        <div className="carousel-item">
-          <img
-            className="d-block img-fluid"
-            src="https://revengeofthefans.com/wp-content/uploads/2019/01/Breaking-Bad-RTF-e1548338096892.jpg"
-            alt="Third slide"
-          />
-        </div>
+      <div
+        className="carousel-inner"
+        role="listbox"
+        style={{ width: "100%", height: "300px" }}
+      >
+        {images.map((image, index) => (
+          <div
+            className={`carousel-item ${index === 0 ? "active" : ""}`}
+            key={index}
+          >
+            <img
+              className="d-block img-fluid"
+              src={image.url}
+              alt={image.name}
+            />
+          </div>
+        ))}
       </div>
       <a
         className="carousel-control-prev"
