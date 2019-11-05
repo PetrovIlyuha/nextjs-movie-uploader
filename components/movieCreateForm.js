@@ -1,9 +1,29 @@
+import { useState } from "react";
+
 const MovieCreateForm = () => {
+  const [form, setForm] = useState({
+    name: "Batman",
+    description: "Cool cars and women"
+  });
+
+  const handleChange = event => {
+    const target = event.target;
+    const name = target.name;
+
+    setForm({
+      ...form,
+      [name]: target.value
+    });
+  };
+
   return (
     <form>
       <div className="form-group">
         <label htmlFor="name">Name</label>
         <input
+          onChange={handleChange}
+          value={form.name}
+          name="name"
           type="text"
           className="form-control"
           id="name"
@@ -14,6 +34,9 @@ const MovieCreateForm = () => {
       <div className="form-group">
         <label htmlFor="description">Description</label>
         <input
+          onChange={handleChange}
+          value={form.description}
+          name="description"
           type="text"
           className="form-control"
           id="description"
@@ -23,6 +46,9 @@ const MovieCreateForm = () => {
       <div className="form-group">
         <label htmlFor="description">Rating</label>
         <input
+          onChange={handleChange}
+          value={form.rating}
+          name="rating"
           type="number"
           max="5"
           min="0"
@@ -37,6 +63,9 @@ const MovieCreateForm = () => {
       <div className="form-group">
         <label htmlFor="image">Image</label>
         <input
+          onChange={handleChange}
+          value={form.image}
+          name="image"
           type="text"
           className="form-control"
           id="image"
@@ -46,6 +75,9 @@ const MovieCreateForm = () => {
       <div className="form-group">
         <label htmlFor="cover">Cover</label>
         <input
+          onChange={handleChange}
+          value={form.cover}
+          name="cover"
           type="text"
           className="form-control"
           id="cover"
@@ -54,7 +86,14 @@ const MovieCreateForm = () => {
       </div>
       <div className="form-group">
         <label htmlFor="longDesc">Long Description</label>
-        <textarea className="form-control" id="longDesc" rows="3"></textarea>
+        <textarea
+          className="form-control"
+          onChange={handleChange}
+          name="longDesc"
+          id="longDesc"
+          rows="3"
+          value={form.longDescription}
+        ></textarea>
       </div>
       <div className="form-group">
         <label htmlFor="genre">Genre</label>
