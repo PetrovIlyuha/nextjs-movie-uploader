@@ -1,9 +1,14 @@
 import { useState } from "react";
 
-const MovieCreateForm = () => {
+const MovieCreateForm = props => {
+  // Fix uncontrolled data
   const [form, setForm] = useState({
-    name: "Batman",
-    description: "Cool cars and women"
+    name: "",
+    description: "",
+    rating: "",
+    image: "",
+    cover: "",
+    longDesc: ""
   });
 
   const handleChange = event => {
@@ -14,6 +19,26 @@ const MovieCreateForm = () => {
       ...form,
       [name]: target.value
     });
+  };
+
+  const handleGenreChange = event => {
+    const { options } = event.target;
+    const optionsLength = options.length;
+    let value = [];
+    for (let i = 0; i < optionsLength; i++) {
+      if (options[i].selected) {
+        value.push(options[i].value);
+      }
+    }
+
+    setForm({
+      ...form,
+      genre: value.toString()
+    });
+  };
+
+  const submitForm = () => {
+    props.handleFormSubmit({ ...form });
   };
 
   return (
@@ -97,7 +122,12 @@ const MovieCreateForm = () => {
       </div>
       <div className="form-group">
         <label htmlFor="genre">Genre</label>
-        <select multiple className="form-control" id="genre">
+        <select
+          onChange={handleGenreChange}
+          multiple
+          className="form-control"
+          id="genre"
+        >
           <option>drama</option>
           <option>music</option>
           <option>adventure</option>
@@ -105,6 +135,9 @@ const MovieCreateForm = () => {
           <option>action</option>
         </select>
       </div>
+      <button type="button" className="btn btn-primary" onClick={submitForm}>
+        Create Movie
+      </button>
     </form>
   );
 };

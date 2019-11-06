@@ -93,6 +93,16 @@ export const getMovies = () => {
   });
 };
 
+export const createMovie = movie => {
+  return new Promise((resolve, reject) => {
+    MOVIE_DATA.push(movie);
+    setTimeout(() => {
+      resolve(MOVIE_DATA);
+      reject("Server not responding...");
+    }, 400);
+  });
+};
+
 export const getMovieById = id => {
   return new Promise((resolve, reject) => {
     const movieIndex = MOVIE_DATA.findIndex(m => m.id === id);

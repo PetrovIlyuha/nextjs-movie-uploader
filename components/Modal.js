@@ -1,68 +1,150 @@
+import React, { Component } from "react";
+
 import MovieCreateForm from "./movieCreateForm";
 
-const Modal = props => {
-  let closeButton = null;
-  const submitModal = () => {
-    alert("Submitting modal..");
-    closeButton.click();
-  };
-  return (
-    <div>
-      <button
-        type="button"
-        className="btn btn-warning"
-        data-toggle="modal"
-        data-target="#exampleModal"
-      >
-        Add movie
-      </button>
+class Modal extends Component {
+  constructor(props) {
+    super(props);
 
-      <div
-        className="modal fade"
-        id="exampleModal"
-        tabIndex="-1"
-        role="dialog"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog" role="document">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">
-                Here you can add new movie
-              </h5>
-              <button
-                type="button"
-                className="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div className="modal-body">{props.children}</div>
-            <div className="modal-footer">
-              <button
-                type="button"
-                ref={element => (closeButton = element)}
-                className="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                Close
-              </button>
-              <button
-                onClick={submitModal}
-                type="button"
-                className="btn btn-primary"
-              >
-                Save changes
-              </button>
+    this.closeButton = null;
+  }
+
+  closeModal() {
+    this.closeButton.click();
+  }
+
+  submitModal = () => {
+    alert("Submitting modal..");
+    this.closeModal();
+  };
+  render() {
+    return (
+      <div>
+        <button
+          type="button"
+          className="btn btn-warning"
+          data-toggle="modal"
+          data-target="#exampleModal"
+        >
+          Add movie
+        </button>
+
+        <div
+          className="modal fade"
+          id="exampleModal"
+          tabIndex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalLabel">
+                  Here you can add new movie
+                </h5>
+                <button
+                  type="button"
+                  className="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div className="modal-body">{this.props.children}</div>
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  ref={element => (this.closeButton = element)}
+                  className="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+                {this.props.hasSubmit && (
+                  <button
+                    onClick={this.submitModal}
+                    type="button"
+                    className="btn btn-primary"
+                  >
+                    Save changes
+                  </button>
+                )}
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
+
+// const Modal = props => {
+//   let closeButton = null;
+//   const submitModal = () => {
+//     alert("Submitting modal..");
+//     closeButton.click();
+//   };
+//   return (
+//     <div>
+//       <button
+//         type="button"
+//         className="btn btn-warning"
+//         data-toggle="modal"
+//         data-target="#exampleModal"
+//       >
+//         Add movie
+//       </button>
+
+//       <div
+//         className="modal fade"
+//         id="exampleModal"
+//         tabIndex="-1"
+//         role="dialog"
+//         aria-labelledby="exampleModalLabel"
+//         aria-hidden="true"
+//       >
+//         <div className="modal-dialog" role="document">
+//           <div className="modal-content">
+//             <div className="modal-header">
+//               <h5 className="modal-title" id="exampleModalLabel">
+//                 Here you can add new movie
+//               </h5>
+//               <button
+//                 type="button"
+//                 className="close"
+//                 data-dismiss="modal"
+//                 aria-label="Close"
+//               >
+//                 <span aria-hidden="true">&times;</span>
+//               </button>
+//             </div>
+//             <div className="modal-body">{props.children}</div>
+//             <div className="modal-footer">
+//               <button
+//                 type="button"
+//                 ref={element => (closeButton = element)}
+//                 className="btn btn-secondary"
+//                 data-dismiss="modal"
+//               >
+//                 Close
+//               </button>
+//               {props.hasSubmit && (
+//                 <button
+//                   onClick={submitModal}
+//                   type="button"
+//                   className="btn btn-primary"
+//                 >
+//                   Save changes
+//                 </button>
+//               )}
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
 
 export default Modal;
