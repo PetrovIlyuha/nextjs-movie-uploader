@@ -1,6 +1,6 @@
 import React from "react";
 import { useRouter } from "next/router";
-import { getMovieById, deleteMovie } from "../../actions";
+import { getMovieById, deleteMovie } from "../../../actions/index.js";
 
 const Movie = props => {
   const router = useRouter();
