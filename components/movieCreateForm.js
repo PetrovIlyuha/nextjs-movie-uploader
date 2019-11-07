@@ -1,15 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const MovieCreateForm = props => {
   // Fix uncontrolled data
-  const [form, setForm] = useState({
+  const [isInitialDataLoaded, setIsInitialDataLoaded] = useState(false);
+
+  const defaultData = {
     name: "",
     description: "",
     rating: "",
     image: "",
     cover: "",
     longDesc: ""
-  });
+  };
+
+  const formData = props.initialData ? { ...props.initialData } : defaultData;
+  const [form, setForm] = useState(formData);
 
   const handleChange = event => {
     const target = event.target;
@@ -129,14 +134,15 @@ const MovieCreateForm = props => {
           id="genre"
         >
           <option>drama</option>
-          <option>music</option>
-          <option>adventure</option>
-          <option>historical</option>
           <option>action</option>
+          <option>adventure</option>
+          <option>crime</option>
+          <option>fantasy</option>
+          <option>thriller</option>
         </select>
       </div>
-      <button type="button" className="btn btn-primary" onClick={submitForm}>
-        Create Movie
+      <button type="button" className="btn btn-info" onClick={submitForm}>
+        {props.submitButton || "Create"}
       </button>
     </form>
   );

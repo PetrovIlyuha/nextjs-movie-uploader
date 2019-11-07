@@ -7,6 +7,7 @@ const Sidemenu = props => {
   const { categories } = props;
   const router = useRouter();
   let modal = null;
+
   const handleCreateMovie = movie => {
     createMovie(movie).then(movies => {
       modal.closeModal();
@@ -23,7 +24,14 @@ const Sidemenu = props => {
       <div className="list-group">
         {categories.map(category => {
           return (
-            <a key={category.id} href="#" className="list-group-item bg-dark">
+            <a
+              onClick={() => props.changeCategory(category.name)}
+              key={category.id}
+              href="#"
+              className={`list-group-item bg-dark ${
+                props.activeCategory === category.name ? "active" : ""
+              }`}
+            >
               {category.name}
             </a>
           );
