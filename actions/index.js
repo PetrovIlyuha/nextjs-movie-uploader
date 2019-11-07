@@ -10,7 +10,8 @@ const CATEGORY_DATA = [
   { id: "c-3", name: "adventure" },
   { id: "c-4", name: "crime" },
   { id: "c-5", name: "fantasy" },
-  { id: "c-6", name: "thriller" }
+  { id: "c-6", name: "thriller" },
+  { id: "c-7", name: "historical" }
 ];
 
 export const getCategories = () => {
@@ -45,4 +46,8 @@ export const updateMovie = movie => {
 
 export const deleteMovie = id => {
   return axios.delete(`${BASE_URL}/api/v1/movies/${id}`).then(res => res.data);
+};
+
+export const getPosts = () => {
+  return axios.get(`${BASE_URL}/api/v1/posts`).then(res => res.data);
 };

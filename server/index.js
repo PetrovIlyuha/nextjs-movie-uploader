@@ -77,10 +77,15 @@ app.prepare().then(() => {
     });
   });
 
-  server.get("*", (req, res) => {
-    // next.js is dispatching requests and providing relative pages to navigate to
-    return handle(req, res);
-  });
+  // server.get("*", (req, res) => {
+  //   // next.js is dispatching requests and providing relative pages to navigate to
+  //   return handle(req, res);
+  // });
+
+  // server.post("*", (req, res) => {
+  //   // next.js is dispatching requests and providing relative pages to navigate to
+  //   return handle(req, res);
+  // });
 
   const PORT = process.env.PORT || 3000;
 

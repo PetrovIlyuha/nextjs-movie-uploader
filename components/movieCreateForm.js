@@ -139,6 +139,7 @@ const MovieCreateForm = props => {
           <option>crime</option>
           <option>fantasy</option>
           <option>thriller</option>
+          <option>historical</option>
         </select>
       </div>
       <button type="button" className="btn btn-info" onClick={submitForm}>

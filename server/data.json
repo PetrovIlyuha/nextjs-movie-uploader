@@ -6,7 +6,7 @@
     "description": "Looking for something to watch? Check out \"True Detective.\" Season 3 is betting on an Oscar winner and a disturbing mystery to recapture the success of its first installment.",
     "longDescription": "True Detective is an American anthology crime drama television series created and written by Nic Pizzolatto. The series, broadcast by the premium cable network HBO in the United States, premiered on January 12, 2014. Each season of the series is structured as a self-contained narrative, employing new cast ensembles, and following various sets of characters and settings.The first season, starring Matthew McConaughey, Woody Harrelson, Michelle Monaghan, Michael Potts, and Tory Kittles, takes place in Louisiana and follows a pair of Louisiana State Police homicide detectives, and their pursuit of a serial killer over a 17-year period.",
     "rating": "4",
-    "genre": "drama,action",
+    "genre": "drama,action,crime,thriller,historical",
     "image": "https://www.hbo.com/content/dam/hbodata/series/true-detective/key_art/true-detective-s3-ka-1920.jpg/_jcr_content/renditions/cq5dam.web.1200.675.jpeg"
   },
   {
@@ -28,5 +28,25 @@
     "longDesc": "Star Wars is an American epic space-opera media franchise created by George Lucas. The franchise began with the eponymous 1977 film and quickly became a worldwide pop-culture phenomenon. The original film, later subtitled Episode IV – A New Hope, was followed by the sequels Episode V – The Empire Strikes Back (1980) and Episode VI – Return of the Jedi ",
     "genre": "drama,adventure",
     "id": "h1uwmt"
+  },
+  {
+    "name": "John Wick 3",
+    "description": "John Wick is an American action thriller media franchise created by Derek Kolstad and owned by Summit Entertainment. Keanu Reeves plays John Wick, a retired hitman seeking vengeance for the killing of his dog. ",
+    "rating": "4",
+    "image": "https://i.ytimg.com/vi/A-TRDk1-RTo/maxresdefault.jpg",
+    "cover": "https://i.ytimg.com/vi/A-TRDk1-RTo/maxresdefault.jpg",
+    "longDesc": "John Wick (born Jardani Jovonovich in Belarus) is played by Keanu Reeves.[1][2][3] Wick was an orphan taken in by Ruska Roma, a criminal organization focused on raising orphans to become Assassin or Ballerina. Sometime after he became an assassin, he is recruited by the Tarasov Russian Mafia as an associate. Due to his ruthlessness as an assassin, he earned the nickname Baba Yaga, or The Boogeyman. At the start of the first film, Wick has been inactive for five years, having retired from criminal underworld activities. ",
+    "genre": "drama,action,crime",
+    "id": "tmem9p"
+  },
+  {
+    "name": "Die Hard",
+    "description": "Die Hard is a 1988 American action thriller film[2] directed by John McTiernan and written by Steven E. de Souza and Jeb Stuart, based on Roderick Thorp's 1979 novel Nothing Lasts Forever.",
+    "rating": "3",
+    "image": "https://cdn1.lockerdome.com/uploads/847648fa6dc03ac978c7b34dd3f541008d2443304b38e3241076fd2939663af1_:original",
+    "cover": "https://cdn1.lockerdome.com/uploads/847648fa6dc03ac978c7b34dd3f541008d2443304b38e3241076fd2939663af1_:original",
+    "longDesc": "Die Hard is a 1988 American action thriller film[2] directed by John McTiernan and written by Steven E. de Souza and Jeb Stuart, based on Roderick Thorp's 1979 novel Nothing Lasts Forever. It was produced by the Gordon Company and Silver Pictures, and distributed by 20th Century Fox. The film follows off-duty New York City Police Department officer John McClane (Bruce Willis) who is caught in a Los Angeles skyscraper during a heist led by Hans Gruber (Alan Rickman). ",
+    "genre": "drama,action,adventure,crime",
+    "id": "4zy8ju"
   }
 ]

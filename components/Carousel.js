@@ -21,7 +21,7 @@ const Carousel = props => {
       <div
         className="carousel-inner"
         role="listbox"
-        style={{ width: "100%", height: "300px" }}
+        style={{ width: "100%", height: "460px" }}
       >
         {images.map((image, index) => (
           <div
