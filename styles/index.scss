@@ -1,0 +1,45 @@
+body {
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 1.2rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.home-page {
+  .movie-genre {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+
+  .card-title {
+    margin-bottom: 0;
+  }
+}
+
+.navbar {
+  min-height: 80px;
+
+  .nav-link {
+    font-size: 24px;
+  }
+
+  .navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+.base-page {
+  margin-top: 100px;
+  padding-bottom: 200px;
+}
